@@ -306,7 +306,7 @@ public class MainView extends javax.swing.JFrame {
                             .addComponent(jSeparator1))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainInputLayout.createSequentialGroup()
-                        .addGap(0, 139, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(mainInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainInputLayout.createSequentialGroup()
                                 .addGroup(mainInputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -401,7 +401,7 @@ public class MainView extends javax.swing.JFrame {
             .addGroup(mainOrdersLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 182, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(82, 82, 82))
             .addGroup(mainOrdersLayout.createSequentialGroup()
@@ -533,14 +533,14 @@ public class MainView extends javax.swing.JFrame {
                             .addComponent(jTextField27)
                             .addComponent(jTextField26)
                             .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(201, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
             .addGroup(mainLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(mainLaporanLayout.createSequentialGroup()
                     .addGap(24, 24, 24)
                     .addComponent(jLabel27)
                     .addGap(77, 77, 77)
                     .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(204, Short.MAX_VALUE)))
+                    .addContainerGap(65, Short.MAX_VALUE)))
         );
         mainLaporanLayout.setVerticalGroup(
             mainLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -681,7 +681,7 @@ public class MainView extends javax.swing.JFrame {
                             .addComponent(jTextField22)
                             .addComponent(jTextField21, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(mainHistoryLayout.createSequentialGroup()
-                        .addContainerGap(454, Short.MAX_VALUE)
+                        .addContainerGap(315, Short.MAX_VALUE)
                         .addComponent(jLabel16)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel37)
@@ -812,34 +812,72 @@ public class MainView extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+ 
     private void btnLaporanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLaporanActionPerformed
         // TODO add your handling code here:
+        mainPanel.removeAll();
+        mainPanel.repaint();
+        mainPanel.revalidate();
         
+        mainPanel.add(mainLaporan);
+        mainPanel.repaint();
+        mainPanel.revalidate();
     }//GEN-LAST:event_btnLaporanActionPerformed
 
     private void btnAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAboutActionPerformed
         // TODO add your handling code here:
-        
+        AboutView a = new AboutView();
+        a.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnAboutActionPerformed
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         // TODO add your handling code here:
+        int dialogBtn=JOptionPane.YES_NO_OPTION;
+        int dialogResult=JOptionPane.showConfirmDialog(this, "Yakin ?","Peringatan",dialogBtn);
+        
+        if (dialogResult==0){
+        System.exit(0);
+        } else
+        {}
         
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     private void btnKasirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKasirActionPerformed
         // TODO add your handling code here:
+        mainPanel.removeAll();
+        mainPanel.repaint();
+        mainPanel.revalidate();
+        
+        mainPanel.add(mainInput);
+        mainPanel.repaint();
+        mainPanel.revalidate();
         
     }//GEN-LAST:event_btnKasirActionPerformed
 
+    
+    
     private void btnOrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrdersActionPerformed
         // TODO add your handling code here:
+        mainPanel.removeAll();
+        mainPanel.repaint();
+        mainPanel.revalidate();
+        
+        mainPanel.add(mainOrders);
+        mainPanel.repaint();
+        mainPanel.revalidate();
          
     }//GEN-LAST:event_btnOrdersActionPerformed
 
     private void btnHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistoryActionPerformed
         // TODO add your handling code here:
+        mainPanel.removeAll();
+        mainPanel.repaint();
+        mainPanel.revalidate();
+        
+        mainPanel.add(mainHistory);
+        mainPanel.repaint();
+        mainPanel.revalidate();
         
     }//GEN-LAST:event_btnHistoryActionPerformed
 
